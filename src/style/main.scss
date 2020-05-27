@@ -1,9 +1,17 @@
-
+// Base
 @import 'variables';
 @import 'base';
-@import 'header-wrapper';
+
+// Header
+@import 'header';
+
+// Auth
 @import 'signin';
 @import 'signup';
+
+
+// Helpers
+@import 'form-title';
 
 html {
     font-size: 62.5%; // 1rem is 10px

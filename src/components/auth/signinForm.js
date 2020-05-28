@@ -8,31 +8,31 @@ import TextLink from "../textLink";
 class SigninForm extends Component {
     render() {
         return (
-          <form className="sign-in-form">
-            <FormTitle className="sign-in-form__title" text="Login" />
-            <Field
-              className="sign-in-form__email"
-              placeholder="Enter Email"
-              name="email"
-              type="email"
-              title="Email"
-              component={FormInput}
-            />
-            <Field
-              className="sign-in-form__password"
-              placeholder="Enter Password"
-              name="password"
-              type="password"
-              title="Password"
-              component={FormInput}
-            />
-            <Field
-                className="sign-in-form__login"
-                name="login"
-                type="submit"
-                title="Login"
-                component={FormButton}
-            />
+            <form className="sign-in-form">
+                <FormTitle className="sign-in-form__title" text="Login"/>
+                <Field
+                    className="sign-in-form__email"
+                    placeholder="Email"
+                    component={FormInput}
+                    name="email"
+                    type="email"
+                    title="Email"
+                />
+                <Field
+                    className="sign-in-form__password"
+                    placeholder="password"
+                    component={FormInput}
+                    name="password"
+                    type="password"
+                    title="PassWord"
+                />
+                <Field
+                    className="sign-in-form__login"
+                    name="login"
+                    type="submit"
+                    title="Login"
+                    component={FormButton}
+                />
             <div className='sign-in-form__text-links'>
                 <TextLink to='/forgot' text='Forgot Password'/>
                 <TextLink to='/signup' text='Not a member? Register here'/>

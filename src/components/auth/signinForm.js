@@ -23,11 +23,11 @@ class SigninForm extends Component {
                 />
                 <Field
                     className="sign-in-form__password"
-                    placeholder="password"
+                    placeholder="Password"
                     component={FormInput}
                     name="password"
                     type="password"
-                    title="PassWord"
+                    title="Password"
                 />
                 <Field
                     className="sign-in-form__login"

@@ -13,9 +13,11 @@
     }
     &__email {
         margin-top: 7.7rem;
+        margin-left: 2rem;
     }
     &__password {
         margin-top: 4rem;
+        margin-left: 2rem;
     }
     &__login {
         margin-top: 8.8rem;
@@ -25,6 +27,6 @@
     }
     &__email, 
     &__password {
-        transform: translateX(-64.5px);
+        transform: translateX(-30px);
     }
 }

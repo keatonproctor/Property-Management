@@ -12,23 +12,23 @@ class NewNewsletterForm extends Component {
 
     return (
       <form onSubmit={handleSubmit} className="new-newsletter-form">
-        <FormTitle className="new-newsletter-form__title" text="Login" />
-        <Field
-          className="new-newsletter-form__email"
-          placeholder="Enter Email"
-          name="email"
-          type="email"
-          title="Email"
-          component={FormInput}
-        />
-        <Field
-          className="new-newsletter-form__email"
-          placeholder="Enter Email"
-          name="email"
-          type="email"
-          title="Email"
+        <FormTitle className="new-newsletter-form__title" text="New Newsletter" />
+          <Field
+            className="new-newsletter-for__newsletter-title"
+            placeholder="Newsletter Title"
+            name="title"
+            type="text"
+            title="Newsletter Title"
+            component={FormInput}
+          />
+          <Field
+          className="new-newsletter-form__body"
+          placeholder="Newsletter Body"
+          name="body"
+          type="text"
+          title="Body"
           component={FormTextArea}
-        />
+        /> 
       </form>
     );
   }

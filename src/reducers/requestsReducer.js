@@ -13,7 +13,7 @@ export default function(state = INITIAL_STATE, action) {
             const boxType = action.payload
             return {
                 ...state,
-                selectedRequests: boxType
+                selectedRequestType: 'pending'
             }
         default: return state;
     }

@@ -9,12 +9,14 @@ import {
 } from './newsletter';
 
 import {
-    changeSelectedRequestType
+    changeSelectedRequestType,
+    createNewRequest
 } from './requests';
 
 export {
     signUp,
     signIn,
     fetchNewsletterWithId,
-    changeSelectedRequestType
+    changeSelectedRequestType,
+    createNewRequest
 };

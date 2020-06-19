@@ -5,13 +5,12 @@ import * as actions from '../../actions';
 import NewsletterBox from './newsletterBox';
 import NewsletterArchive from './newsletterArchive';
 import NewsletterLatest from './newsletterLatest';
-
 import Button from '../button';
 
 import RequireAdmin from '../auth/requireAdmin';
 
 class NewsletterGrid extends Component {
-
+    
     handleAddNewsletter = () => {
         this.props.history.push('/newsletter/new');
     }

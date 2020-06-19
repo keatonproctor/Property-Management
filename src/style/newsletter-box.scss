@@ -1,7 +1,6 @@
 .newsletter-box {
     grid-row: box-s/box-e;
     grid-column: box-s/box-e;
-
     align-content: center;
 
     height: 16rem;
@@ -13,7 +12,6 @@
 
     display: grid;
     justify-items: center;
-
     grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
     grid-template-columns: [s] 1fr [e];
 
@@ -51,5 +49,5 @@
         border: .15rem solid $color-red-BA;
         border-bottom: none;
         border-left: none;
-    }	    
+    }
 }

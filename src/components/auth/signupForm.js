@@ -55,7 +55,7 @@ class SignupForm extends Component {
         <div className='sign-up-form__text-links'>
             <TextLink to='/signin' text='Already Registered? Login'/>
         </div>
-
+        
       </form>
     );
   }

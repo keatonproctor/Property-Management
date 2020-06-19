@@ -28,7 +28,6 @@ class Dashboard extends Component {
                     active: false,
                     component: <RequestsGrid history={this.props.history}/>
                 }
-                
             ]
         }
     }

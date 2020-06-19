@@ -5,7 +5,7 @@ import {
 
 const INITIAL_STATE = {
     requests: [],
-    selectedRequests: 'pending'
+    selectedRequestType: 'pending'
 }
 
 export default function(state = INITIAL_STATE, action) {

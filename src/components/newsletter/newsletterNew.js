@@ -5,12 +5,11 @@ import * as actions from '../../actions';
 
 import NewNewsletterForm from "./newsletterNewForm";
 
-
 class NewNewsletter extends Component {
-    
+
   onSubmit = fields => {
 
-  const { title, body, image } = fields;
+    const { title, body, image } = fields;
 
     var formData = new FormData();
     formData.append('title', title);
@@ -20,12 +19,13 @@ class NewNewsletter extends Component {
     this.props.createNewNewsletter(formData, () => {
         this.props.history.push("/dashboard");
     })
-
+    
   };
 
   onCancel = () => {
     this.props.history.push("/dashboard");
   };
+
   render() {
     return (
       <div className="new-newsletter">

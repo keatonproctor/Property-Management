@@ -35,4 +35,4 @@ class RequestsGrid extends Component {
 
 RequestsGrid = connect(null, actions)(RequestsGrid)
 
-export default RequestsGrid; 
+export default RequestsGrid;

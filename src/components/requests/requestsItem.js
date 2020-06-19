@@ -13,7 +13,7 @@ import { ROOT_URL } from '../../config';
 import RequireAdmin from '../auth/requireAdmin';
 
 class RequestsItem extends Component {
-
+    
     constructor() {
         super()
 
@@ -53,29 +53,29 @@ class RequestsItem extends Component {
             moveButtonIcon = 'fas fa-exclamation-triangle'
             mainIcon = 'fas fa-check-square'
         }
-
         return (
             <div id={`${_id}-requests-item`} className='requests-item'>
                 <Icon className='requests-item__icon' icon={mainIcon}/>
                 <div className='requests-item__title'>
-                <div className='requests-item__title__text'>{title}</div>
+                    <div className='requests-item__title__text'>{title}</div>
                     <Icon callback={() => this.toggleDropdown()} className='requests-item__title__arrow' icon='fas fa-sort-down'/>
                 </div>
                 <div className='requests-item__tenant-unit'>
-                    Max - Unit 115
+                    {this.props.fullname} - Unit {this.props.unit}
                 </div>
                 <div className='requests-item__date'>
                     { parsedDate.getMonth() + 1 }
                     /
                     { parsedDate.getDate() }
                     /
-                    { parsedDate.getFullYear() - 2000 }
+                    { parsedDate.getFullYear() - 2000 } 
                 </div>
+
                 <RequireAdmin>
                     <Button className='requests-item__move' icon={moveButtonIcon} callback={() => this.handleStatus()}/>
                 </RequireAdmin>
                 <div className='requests-item__description'>
-                <AnimateHeight
+                    <AnimateHeight
                         duration={300}
                         height={this.state.height}
                     >
@@ -96,6 +96,14 @@ class RequestsItem extends Component {
     }
 }
 
-RequestsItem = connect(null, actions)(RequestsItem);
+function mapStateToProps(state) {
+    const { fullname, unit } = state.auth.user;
+    return {
+        fullname,
+        unit
+    }
+}
+
+RequestsItem = connect(mapStateToProps, actions)(RequestsItem);
 
 export default RequestsItem;

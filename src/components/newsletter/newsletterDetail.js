@@ -27,7 +27,7 @@ class NewsletterDetail extends Component {
                     small={true}
                     onClick={() => this.props.history.push('/dashboard')}
                     title='Cancel'
-                />
+                    />
             </div>
         )
     }

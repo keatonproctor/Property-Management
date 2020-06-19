@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from '../button';
+
 import history from '../../history';
 
 import { ROOT_URL } from '../../config';
@@ -12,7 +13,7 @@ class NewsletterLatest extends Component {
     handleEdit = () => {
         history.push(`/newsletter/edit/${this.props._id}`);
     }
-
+        
     render() {
         const { title, imageUrl, body } = this.props;
         return (
@@ -23,7 +24,7 @@ class NewsletterLatest extends Component {
                     <Button className='newsletter-latest__button' callback={() => this.handleEdit()} icon='fas fa-pencil-alt'/>
                 </RequireAdmin>
                 <div className='newsletter-latest__body'>
-                <p>{body}</p>
+                    <p>{body}</p>
                 </div>
             </div>
         )

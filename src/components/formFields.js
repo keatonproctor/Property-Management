@@ -8,10 +8,10 @@ export class FormInput extends Component {
             <div className={`${className} form-input`}>
                 <label className='form-input__title'>{title}</label>
                 <input
-                    className={`${className} form-input__input`}
+                    className='form-input__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}    
+                    placeholder={placeholder} 
                 />
             </div>
         )
@@ -28,14 +28,15 @@ export class FormTextArea extends Component {
                     className='form-textarea__input'
                     type={type}
                     {...input}
-                    placeholder={placeholder}    
+                    placeholder={placeholder} 
                 />
-
+                
                 {/* </textarea> */}
             </div>
         )
     }
 }
+
 
 export class FormButton extends Component {
     render() {
@@ -48,7 +49,7 @@ export class FormButton extends Component {
                         ${danger ? 'form-button-small__danger' : ''}
                     `}
                     type={type}
-                    {...input}
+                    {...input} 
                     onClick={onClick}
                 >
                 {title}
@@ -75,7 +76,7 @@ export class FormImage extends Component {
                 <img
                     id='newsletter-new-image'
                     className='form-image__image'
-                    src={imageUrl}  
+                    src={imageUrl} 
                 />
                 <input
                     className='form-image__replace'

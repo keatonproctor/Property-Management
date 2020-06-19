@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import history from '../history';
 
-
 export default function(ComposedComponent) {
     class Authentication extends Component {
         componentWillMount() {
@@ -12,11 +11,9 @@ export default function(ComposedComponent) {
             }
         }
         componentWillUpdate(nextProps) {
-
             if(!nextProps.authenticated) {
                 history.push('/');
             }
-
         }
         render() {
             return <ComposedComponent {...this.props}/>
@@ -27,6 +24,6 @@ export default function(ComposedComponent) {
         const { authenticated } = state.auth;
         return { authenticated } 
     }
-
+    
     return connect(mapStateToProps)(Authentication)
 }

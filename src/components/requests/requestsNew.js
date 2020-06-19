@@ -6,7 +6,9 @@ import * as actions from '../../actions';
 import NewNewsletterForm from "../newsletter/newsletterNewForm";
 
 class NewRequest extends Component {
+
   onSubmit = fields => {
+
     const { title, body, image } = fields;
 
     var formData = new FormData();
@@ -17,8 +19,8 @@ class NewRequest extends Component {
     this.props.createNewRequest(this.props._id, formData, () => {
         this.props.history.push("/dashboard");
     })
-
-    };  
+    
+  };
 
   onCancel = () => {
     this.props.history.push("/dashboard");

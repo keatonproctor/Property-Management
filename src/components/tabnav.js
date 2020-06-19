@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class TabNav extends Component {
-    render() {
-      return (
-          <div className='tab-nav'>
+  render() {
+    return (
+        <div className='tab-nav'>
             <div className='tab-nav__tabs'>
             {
                 this.props.tabs.map((tab, index) => {
@@ -12,6 +12,7 @@ class TabNav extends Component {
                 })
             }
             </div>
+            
             {
                 this.props.tabs.map((tab, index) => {
                     if(tab.active) {
@@ -23,9 +24,9 @@ class TabNav extends Component {
                     }
                 })
             }
-            
-          </div>
-      )
+    
+        </div>
+    )
   }
 }
 

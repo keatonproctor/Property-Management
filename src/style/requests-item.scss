@@ -10,7 +10,6 @@
         grid-row: s/e;
         justify-self: center;
     }
-
     &__title {
         align-self: end;
         grid-column: title-s/title-e;
@@ -37,7 +36,6 @@
     }
     &__description {
         grid-column: s/e;
-
     }
     .item-description {
         display: grid;
@@ -55,6 +53,7 @@
 .requests-item {
     transition: all .3s ease;
 
+    
     &__icon {
         font-size: 2.7rem;
     }

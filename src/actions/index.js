@@ -24,6 +24,7 @@ import {
 export {
     signUp,
     signIn,
+    fetchNewsletters,
     fetchNewsletterWithId,
     changeSelectedRequestType,
     createNewRequest,

@@ -23,6 +23,7 @@ export function fetchNewsletters() {
     }
 }
 
+
 export function fetchNewsletterWithId(id) {
     return {
         type: FETCH_NEWSLETTER_ID,

@@ -1,16 +1,15 @@
 import React from 'react';
-import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Router, Route, Switch } from 'react-router-dom';
-
 import reduxThunk from 'redux-thunk';
-import reducers from "./reducers";
+import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
 
 // import 'bootstrap/dist/css/bootstrap.css';
-import "./style/main.scss";
+import './style/main.scss';
 
 import history from './history';
 
@@ -35,17 +34,17 @@ function main() {
       <Router history={history}>
         <Switch>
           <Layout>
-              <Route path='/' exact component={Signin}/>
-              <Route path='/signin' component={Signin}/>
-              <Route path='/signup' component={Signup}/>
+            <Route path='/' exact component={Signin}/>
+            <Route path='/signin' component={Signin}/>
+            <Route path='/signup' component={Signup}/>
 
-              <Route path='/dashboard' component={requireAuth(Dashboard)}/>
+            <Route path='/dashboard' component={requireAuth(Dashboard)}/>
 
-              <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
-              <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
-              <Route path='/newsletter/detail/:id' component={requireAuth(NewsletterDetail)}/>
+            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
+            <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
+            <Route path='/newsletter/detail/:id' component={requireAuth(NewsletterDetail)}/>
 
-              <Route path='/request/new' component={requireAuth(NewRequest)}/>
+            <Route path='/request/new' component={requireAuth(NewRequest)}/>
           </Layout>
         </Switch>
       </Router>
